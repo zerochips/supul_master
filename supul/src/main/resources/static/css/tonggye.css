@@ -1,0 +1,110 @@
+@charset "UTF-8";
+ *{box-sizing:border-box;}
+body{
+	width: 1200px;
+}
+
+        .superMainsection1 {
+            width: 70%;
+          padding: 20px;
+          height: 450px;
+            background-color: #EFEFEF;
+            float: left; 
+        }
+
+        
+        .superMainsection2 {
+            width: 30%;
+            padding: 20px;
+             height:450px;
+            background-color: #D8D8D8;
+            float: left; 
+        }
+
+        /* 세션 3 스타일 */
+        .superMainsection3 {
+            clear: both; 
+            width: 100%;
+            padding: 30px;
+            background-color: #CCCCCC;
+            text-align: center;
+            align-items: center;
+        }
+.graph-container {
+    /* 그래프 컨테이너 스타일 지정 */
+    background-color: #f5f5f5;
+   
+    border: 1px solid #ddd;
+}
+
+.sales-details {
+    /* 매출 내역 컨테이너 스타일 지정 */
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+table {
+    /* 표 스타일 지정 */
+    width: 80%;
+    margin-left: 100px;
+    border-collapse: collapse;
+}
+
+table th{
+	
+	 border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+
+table td {
+    /* 표 셀 스타일 지정 */
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#chart{
+	
+	margin: 20px auto;
+	}
+	
+	
+	
+	/*  어드민*/
+	  .adminMainsection1 {
+            width: 70%;
+          padding: 20px;
+          height: 35%;
+            background-color: #EFEFEF;
+            float: left; 
+        }
+
+        
+        .adminMainsection2 {
+            width: 30%;
+            padding: 20px;
+             height:35%;
+            background-color: #D8D8D8;
+            float: left; 
+        }
+
+        /* 세션 3 스타일 */
+        .adminMainsection3 {
+            clear: both; 
+            width: 100%;
+            padding: 30px;
+            background-color: #CCCCCC;
+            text-align: center;
+            align-items: center;
+        }
+        
+ .canvas-container {
+    display: flex; /* 가로로 정렬하기 위해 flexbox 사용 */
+    justify-content: space-between; /* Canvas 요소 사이에 공간을 두고 정렬 */
+    /* 또는 아래와 같이 float 속성을 사용할 수도 있습니다.
+    float: left;
+    margin-right: 10px; */ 
+}

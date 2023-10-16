@@ -1,0 +1,210 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+/* *************************************************************** */
+/* 공지사항 페이징 */
+.noticeListPaging{text-align: center; margin: 20px auto 0 auto;}
+.noticeListPaging .pagination{display: flex; justify-content: center; align-items: center;}
+
+.noticeListPaging .pagination a{
+	margin: 0 5px 0 0;
+	padding: 6px 12px;  
+  	position: relative;
+  	display: inline-block;  
+  	text-align: center;
+  	white-space: nowrap;
+  	vertical-align: middle;
+  	cursor: pointer;
+  	background-image: none;
+  	border: 1px solid transparent;
+  	border-radius: 4px;
+  	background-color: #2c3840;
+  	color: #fff;
+  	outline: 0;
+  	text-decoration: none;
+  	transition: all 0.2s linear;
+  	&:hover {background-color: lighten(#2c3840, 10%);
+  	}
+}
+/* 버튼 선택 됐을 때 */
+.noticeListPaging .pagination .active a{
+	background: dodgerblue;
+	&:hover {background-color: darken(dodgerblue, 10%);
+	}
+}
+/* 다음 페이지 */
+.noticeListPaging .pagination .pagination-next a{
+	border-radius: 10px 0 0 10px; 
+	margin-right: 18px;
+  &:hover::after {border-left: 17px solid lighten(#2c3840, 10%);}
+  &::after{
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: -16px;
+    width: -2px;
+    height: 0;
+    border-top: 18.5px solid transparent;
+    border-bottom: 17.3px solid transparent;
+    border-left: 15px solid #2c3840;
+    transition: all 0.2s linear;
+  }
+}
+/* 이전 페이지 */
+.noticeListPaging .pagination .pagination-previous a{
+	border-radius: 0 10px 10px 0; 
+	margin-left: 18px;
+  &:hover::after {border-right: 30px solid lighten(#2c3840, 10%);}
+  &::before{content: "";}
+  &::after{
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -16px;
+    width: -2px;
+    height: 0;
+    border-bottom: 17.3px solid transparent;
+    border-top: 18.5px solid transparent;
+    border-right: 15px solid #2c3840;
+    transition: all 0.2s linear;
+  }
+}
+
+
+/* *************************************************************** */
+/* 문의 페이징 */
+.qnaListPaging{text-align: center; margin: 20px auto 0 auto;}
+.qnaListPaging .pagination{display: flex; justify-content: center; align-items: center;}
+
+.qnaListPaging .pagination a{
+	margin: 0 5px 0 0;
+	padding: 6px 12px;  
+  	position: relative;
+  	display: inline-block;  
+  	text-align: center;
+  	white-space: nowrap;
+  	vertical-align: middle;
+  	cursor: pointer;
+  	background-image: none;
+  	border: 1px solid transparent;
+  	border-radius: 4px;
+  	background-color: #2c3840;
+  	color: #fff;
+  	outline: 0;
+  	text-decoration: none;
+  	transition: all 0.2s linear;
+  	&:hover {background-color: lighten(#2c3840, 10%);
+  	}
+}
+/* 버튼 선택 됐을 때 */
+.qnaListPaging .pagination .active a{
+	background: dodgerblue;
+	&:hover {background-color: darken(dodgerblue, 10%);
+	}
+}
+/* 다음 페이지 */
+.qnaListPaging .pagination .pagination-next a{
+	border-radius: 10px 0 0 10px; 
+	margin-right: 18px;
+  &:hover::after {border-left: 17px solid lighten(#2c3840, 10%);}
+  &::after{
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: -20px;
+    width: 0px;
+    height: 0;
+    border-top: 18.5px solid transparent;
+    border-bottom: 17.3px solid transparent;
+    border-left: 19px solid #2c3840;
+    transition: all 0.2s linear;
+  }
+}
+/* 이전 페이지 */
+.qnaListPaging .pagination .pagination-previous a{
+	border-radius: 0 10px 10px 0; 
+	margin-left: 18px;
+  &:hover::after {border-right: 30px solid lighten(#2c3840, 10%);}
+  &::before{content: "";}
+  &::after{
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -20px;
+    width: 0px;
+    height: 0;
+    border-bottom: 17.3px solid transparent;
+    border-top: 18.5px solid transparent;
+    border-right: 19px solid #2c3840;
+    transition: all 0.2s linear;
+  }
+}
+
+/* *************************************************************** */
+/* 후기 페이징 */
+.reviewListPaging{text-align: center; margin: 20px auto 0 auto;}
+.reviewListPaging .pagination{display: flex; justify-content: center; align-items: center;}
+
+.reviewListPaging .pagination a{
+	margin: 0 5px 0 0;
+	padding: 6px 12px;  
+  	position: relative;
+  	display: inline-block;  
+  	text-align: center;
+  	white-space: nowrap;
+  	vertical-align: middle;
+  	cursor: pointer;
+  	background-image: none;
+  	border: 1px solid transparent;
+  	border-radius: 4px;
+  	background-color: #2c3840;
+  	color: #fff;
+  	outline: 0;
+  	text-decoration: none;
+  	transition: all 0.2s linear;
+  	&:hover {background-color: lighten(#2c3840, 10%);
+  	}
+}
+/* 버튼 선택 됐을 때 */
+.reviewListPaging .pagination .active a{
+	background: dodgerblue;
+	&:hover {background-color: darken(dodgerblue, 10%);
+	}
+}
+/* 다음 페이지 */
+.reviewListPaging .pagination .pagination-next a{
+	border-radius: 10px 0 0 10px; 
+	margin-right: 18px;
+  &:hover::after {border-left: 17px solid lighten(#2c3840, 10%);}
+  &::after{
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: -20px;
+    width: 0px;
+    height: 0;
+    border-top: 18.5px solid transparent;
+    border-bottom: 17.3px solid transparent;
+    border-left: 19px solid #2c3840;
+    transition: all 0.2s linear;
+  }
+}
+/* 이전 페이지 */
+.reviewListPaging .pagination .pagination-previous a{
+	border-radius: 0 10px 10px 0; 
+	margin-left: 18px;
+  &:hover::after {border-right: 30px solid lighten(#2c3840, 10%);}
+  &::before{content: "";}
+  &::after{
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -20px;
+    width: 0px;
+    height: 0;
+    border-bottom: 17.3px solid transparent;
+    border-top: 18.5px solid transparent;
+    border-right: 19px solid #2c3840;
+    transition: all 0.2s linear;
+  }
+}

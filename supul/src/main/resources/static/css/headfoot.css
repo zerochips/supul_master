@@ -1,0 +1,138 @@
+/*Grandiflora One - 메인 h1*/
+@import url('https://fonts.googleapis.com/css2?family=Grandiflora+One&display=swap');
+/*Sunflower*/
+@import url('https://fonts.googleapis.com/css2?family=Grandiflora+One&display=swap');
+
+
+body {
+
+	/*background-color: rgb(240, 233, 218); */
+	/*background-color: rgb(219, 233, 229); */
+	/*background-color: rgb(226, 232, 225); */
+	/*background-color: rgb(224, 230, 223); */
+	/*background-color: #1a1f16;*/
+	/*background-color: rgb(24, 29, 20);*/
+	background-image: url('/images/background.png');
+	background-size: cover;
+	width: 1200px;
+	margin: 20px auto;
+	padding-top: 10px;
+
+}
+
+/*===========첫번째 - 로고부분 (시작)===========*/
+#header .header-logo {
+   display: flex;
+   justify-content: space-between;
+}
+
+#header .header-logo .logo {
+   text-align: center;
+}
+
+#header .header-logo .logo img {
+   width: 200px;
+   /* 로고 이미지 너비 설정 */
+   margin-left: 500px;
+   /* 로고를 오른쪽으로 이동 */
+}
+
+#header .header-logo .login {
+   text-align: right;
+}
+
+
+/* 로그인 아이콘 스타일 */
+.fa-arrow-right-to-bracket:before,
+.fa-sign-in:before {
+   content: "\f090";
+   color: #f3e7db;
+   font-size: 20px;
+}
+
+#header .header-logo .login li {
+   list-style: none;
+   font-size: 16px;
+   color: #f3e7db;
+   padding-bottom: 3px;
+}
+
+#header .header-logo .login li a {
+   font-size: 16px;
+   color: #f3e7db;
+   text-decoration: none;
+}
+
+#header .header-logo .login .go {
+   font-size: 14px;
+}
+
+/*===========첫번째 (끝)===========*/
+
+
+/*===========두번째 (시작)===========*/
+#header .menu {
+   display: flex;
+   justify-content: center;
+   border-bottom: 1px solid white;
+   position: relative;
+   z-index: 1000;
+}
+
+#header .menu .menuTab {
+   display: inline-block;
+   text-align: center;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+#header .menu .menuTab li {
+   display: inline-block;
+   width: 160px;
+   padding: 5px 10px;
+   text-align: center;
+   position: relative;
+   color: #f3e7db;
+}
+
+#header .menu .menuTab li a {
+   text-decoration: none;
+   color: #f3e7db;
+}
+
+#header .menu>.menuTab li ul.subMenu {
+   display: none;
+   position: absolute;
+   top: 30px;
+   left: 0;
+   padding: 0;
+}
+
+#header .menu>.menuTab li:hover {
+   background-color: rgb(180, 124, 73);
+   
+}
+
+#header .menu>.menuTab li:hover ul.subMenu {
+   display: block;
+   background-color:#22241c;
+   border: 1px solid #f3e7db;
+}
+
+#header .menu>.menuTab li:hover ul.subMenu li a {
+   color: #f3e7db;
+}
+
+#header .menu>.menuTab li ul.subMenu>li {
+   display: inline-block;
+   width: 158px;
+   text-align: center;
+}
+
+#header .menu>.menuTab li ul.subMenu>li:hover {
+   background-color: rgba(168, 141, 110, 0.2);
+   /* 50% 투명한 갈색 배경 */
+}
+
+/*===========두번째 (끝)===========*/

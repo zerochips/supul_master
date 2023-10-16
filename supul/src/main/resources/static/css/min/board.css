@@ -1,0 +1,470 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+/* =========================================================================================== */
+/* ======================================= 공지사항 목록 공통 ======================================= */
+body{background-color:  rgb(64, 0, 0);}
+header, h1, h2{margin: 0 auto; width: 1200px; text-align: center;}
+
+/* 공지사항 리스트 */
+h1{margin: 50px auto 30px auto;}
+
+/* 공지사항 글쓰기 버튼 */
+.noticeListWrite{float: right;}
+.noticeListWrite button{margin: 0 40px 5px 0; padding: 5px 20px; 
+	background-color: cornflowerblue; color: white; font-weight: bold; 
+	border-radius: 10px;}
+
+/* 공지사항 테이블 */
+.noticeList{width: 1150px; margin: 0 auto; overflow: auto; background: #fff; 
+	border-radius: 8px; border-collapse: collapse;}
+
+.noticeList thead th{padding: 15px; height: 60px; background: #F9FAFB; 
+	text-align: center; font-size: 18px; font-weight: 600; 
+	border-bottom: 1px solid #eef0f3; text-transform: uppercase;}
+
+.noticeList thead th:first-child{border-top-left-radius: 8px;}
+.noticeList thead th:last-child{border-top-right-radius: 8px;}
+
+
+.noticeList tbody tr td{padding: 10px 15px;text-align: center;}
+.noticeList tbody tr td:nth-of-type(3){text-align: left;}
+.noticeList tbody tr td:nth-of-type(3) a{text-decoration: none; font-size: 15px; color: #554cd1; 
+	font-weight: 600;}
+
+
+/* ======================================= 공지사항 상세 ======================================= */
+h2{margin: 50px auto 30px auto;}
+
+/* 공지 상세 테이블 */
+.noticeDetail{width: 100%; border-collapse: collapse; 
+	margin-bottom: 20px; background: #fff; border-radius: 8px;}
+
+.noticeDetail th,
+.noticeDetail td{padding: 10px; text-align: left; border-bottom: 1px solid #eef0f3;}
+
+.noticeDetail tr:nth-of-type(6) th,
+.noticeDetail tr:nth-of-type(6) td,
+.noticeDetail tr:nth-of-type(7) th,
+.noticeDetail tr:nth-of-type(7) td{border-bottom: none;}
+
+.noticeDetail tr:nth-of-type(6) td{margin: 0 auto; text-align: center;}
+.noticeDetail tr:nth-of-type(7) td{margin: 0 auto; text-align: center;}
+
+.noticeDetail th{font-weight: bold; width: 20%; background: #f9fafb;
+	text-align: center;}
+
+.noticeDetail th:first-child{border-top-left-radius: 8px;}
+.noticeDetail th:last-child{border-top-right-radius: 8px;}
+
+.noticeDetail td{width: 80%;}
+.noticeDetail tr:nth-of-type(14) td{text-align: center;}
+.noticeDetail img{max-width: 1000px; height: auto; display: block; margin: 10px auto;}
+
+/*공지사항 상세 버튼*/
+.noticeDetail button{margin: 5px 5px 0 0; padding: 10px 20px; font-weight: bold; border-radius: 5px;
+	background-color: #002914; cursor: pointer; transition: background-color 0.3s ease;
+	border: none; margin-right: 10px;}
+.noticeDetail button a{text-decoration: none; color: white; font-size: 16px;}
+.noticeDetail button:last-child{margin-right: 10px;}
+.noticeDetail button:hover{background-color: rgb(0, 64, 0);}
+
+/* ======================================= 공지사항 글작성 ======================================= */
+/* 공지사항 작성 테이블 */
+.noticeWrite{width: 100%; border-collapse: collapse; margin-bottom: 20px; 
+	border: none; background: #fff; border-radius: 8px;}
+
+.noticeWrite tr:nth-of-type(7) td{margin: 0 auto; text-align: center;}
+
+.noticeWrite th,
+.noticeWrite td{padding: 10px; text-align: left; border-bottom: 1px solid #eef0f3;}
+
+.noticeWrite th{text-align: center;}
+
+.noticeWrite tr:nth-of-type(6) td{text-align: center;}
+
+.noticeWrite td:first-child{width: 20%; font-weight: bold;}
+.noticeWrite td:nth-child(2){width: 80%;}
+
+.noticeWrite input[type="text"],
+.noticeWrite input[type="file"],
+.noticeWrite #branchId,
+.noticeWrite select,
+.noticeWrite textarea{width: 100%; padding: 10px; border: 1px solid #ccc; 
+	border-radius: 5px; margin-bottom: 10px; font-size: 16px;}
+
+.noticeWrite textarea{height: 300px; resize: none;}
+
+/* 공지사항 작성, 목록 버튼 */
+.noticeWrite button{background-color: #002914; color: white; padding: 10px 20px;  border-radius: 5px; font-size: 16px;
+    cursor: pointer; transition: background-color 0.3s ease;}
+.noticeWrite button a{text-decoration: none; color: white;}
+.noticeWrite button:hover{background-color: rgb(0, 64, 0);}
+
+
+/* ======================================= 공지사항 수정 ======================================= */
+/* 공지사항 수정 테이블 */
+.noticeModiTable{width: 100%; border-collapse: collapse; margin-bottom: 20px; 
+	border: none; background: #fff; border-radius: 8px;}
+
+.noticeModiTable tr:nth-of-type(7) td{margin: 0 auto; text-align: center;}
+
+.noticeModiTable th,
+.noticeModiTable td{padding: 10px; text-align: left; border-bottom: 1px solid #eef0f3;}
+
+.noticeModiTable th{text-align: center;}
+
+.noticeModiTable tr:nth-of-type(6) th,
+.noticeModiTable tr:nth-of-type(6) td{border-bottom: none;}
+
+/* 입력 필드 */
+.noticeModiTable input[type="text"],
+.noticeModiTable input[type="file"],
+.noticeModiTable textarea{width: 100%; padding: 10px; border: 1px solid #ccc;
+    border-radius: 5px; margin-bottom: 10px; font-size: 16px;}
+.noticeModiTable textarea{height: 150px; resize: none;}
+
+/* 파일 업로드 */
+.noticeModiTable input[type="file"]{display: block;}
+
+/* 버튼 */
+.noticeModiTable button{background-color: #002914; color: white; padding: 10px 20px;
+    border-radius: 5px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;
+    border: none; margin-right: 10px;}
+.noticeModiTable button:last-child{margin-right: 0;}
+.noticeModiTable button:hover{background-color: rgb(0, 64, 0);}
+
+/* 버튼 정렬*/
+.noticeModiDelBtn{display: inline-flex;}
+
+/* 라벨 */
+.noticeModiTable label{font-weight: bold;}
+
+/* 선택 목록 */
+.noticeModiTable select{width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;
+    font-size: 16px;}
+    
+/* 수정, 삭제, 목록 버튼 영역 */
+.noticeModiBtn{width: 100%; text-align: right; margin-top: 20px;}
+
+/* 수정, 삭제 버튼 그룹 */
+.noticeModiDelBtn button{background-color: #002914; color: white; padding: 10px 20px;
+    border-radius: 5px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;
+    border: none; margin-right: 10px;}
+.noticeModiDelBtn button:last-child{margin-right: 0;}
+.noticeModiDelBtn button:hover{background-color: rgb(0, 64, 0);}
+
+/* 목록 버튼 */
+.noticeModiListBtn button{background-color: #002914; color: white; padding: 10px 20px;
+    border-radius: 5px; font-size: 16px;cursor: pointer; transition: background-color 0.3s ease;
+    border: none;}
+.noticeModiListBtn button:hover{background-color: rgb(0, 64, 0);}
+
+
+
+/* ========================================================================================== */
+/* ======================================= 문의 게시판 목록 ======================================= */
+/* 문의 글쓰기 버튼 */
+.qnaListWrite{float: right;}
+.qnaListWrite button{margin: 0 40px 5px 0; padding: 5px 20px; 
+	background-color: cornflowerblue; color: white; font-weight: bold; 
+	border-radius: 10px;}
+
+
+/* 문의 목록 테이블 */
+.qnaList{width: 1150px; margin: 0 auto; overflow: auto; background: #fff; border-radius: 8px;}
+.qnaList thead th{padding: 15px; height: 60px; background: #F9FAFB; text-align: center; font-size: 18px; font-weight: 600; border-bottom: 1px solid #eef0f3; text-transform: uppercase;}	
+.qnaList tbody tr td{padding: 10px 15px; text-align: center;}
+.qnaList tbody tr td:nth-of-type(3){text-align: left;}
+.qnaList tbody tr td:nth-of-type(3) a{text-decoration: none; font-size: 15px; color: #554cd1; font-weight: 600;}
+
+
+/* ======================================= 문의 상세 ======================================= */
+/* 문의 상세 테이블 */
+.qnaDetail{width: 100%; border-collapse: collapse; margin-bottom: 20px; 
+	border: none; background: #fff; border-radius: 8px;}
+
+.qnaDetail th,
+.qnaDetail td{padding: 10px; text-align: left; border-bottom: 1px solid #eef0f3;}
+
+.qnaDetail tr:nth-of-type(7) th,
+.qnaDetail tr:nth-of-type(7) td{border-bottom: none;}
+
+.qnaDetail th{width: 20%; height: 50px; text-align: center; font-weight: bold; background: #f9fafb;}
+
+.qnaDetail th:first-child{border-top-left-radius: 8px;}
+.qnaDetail th:last-child{border-top-right-radius: 8px;}
+
+.qnaDetail tr:nth-of-type(7) td{width: 80%; margin: 0 auto; text-align: center;}
+
+/*문의 상세 버튼*/
+.qnaDetail button{background-color: #002914; color: white; padding: 10px 20px;
+    border-radius: 5px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;
+    border: none; margin-right: 10px;}
+
+.qnaDetail button:last-child{margin-right: 0;}
+.qnaDetail button:hover{background-color: rgb(0, 64, 0);}
+
+/* ======================================= 문의 상세 글작성 ======================================= */
+/* 질문 작성 테이블 */
+.qnaWriteTable{width: 100%; border-collapse: collapse; margin-bottom: 20px; 
+	border: 1px solid #eef0f3; background: #fff; border-radius: 8px;}
+
+.qnaWriteTable th,
+.qnaWriteTable td{padding: 10px; text-align: center; border-bottom: 1px solid #eef0f3;}
+.qnaWriteTable th:first-child{width: 20%; font-weight: bold;}
+.qnaWriteTable td:nth-child(2){width: 80%;}
+
+/* 입력 필드 스타일 */
+.qnaWriteTable input[type="text"],
+.qnaWriteTable #branchId,
+.qnaWriteTable select,
+.qnaWriteTable textarea{width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; margin-bottom: 10px; font-size: 16px;}
+
+.qnaWriteTable textarea{height: 300px; resize: none;}
+
+/* 작성, 목록 버튼 */
+.qnaWriteTable button{background-color: #002914; color: white; padding: 10px 20px; border-radius: 5px; font-size: 16px; cursor: pointer;
+    transition: background-color 0.3s ease;}
+.qnaWriteTable button a{text-decoration: none; color: white;}
+.qnaWriteTable button:hover{background-color: rgb(0, 64, 0);}
+
+
+/* ======================================= 문의 수정 ======================================= */
+/* 문의 수정 테이블 */
+.qnaModifyTable{width: 100%; border-collapse: collapse; margin-bottom: 20px;
+    border: 1px solid #eef0f3; background: #fff; border-radius: 8px;}
+
+.qnaModifyTable th{width: 20%; font-weight: bold; text-align: center;}
+.qnaModifyTable td{width: 80%; padding: 10px; text-align: left; 
+	border-bottom: 1px solid #eef0f3;}
+
+.qnaModifyTable tr:nth-of-type(5){height: 80px;}
+
+/* 입력 필드 스타일 */
+.qnaModifyTable input[type="text"],
+.qnaModifyTable input[type="file"],
+.qnaModifyTable select,
+.qnaModifyTable textarea{width: 100%; padding: 10px; border: 1px solid #ccc;
+    border-radius: 5px; margin-bottom: 10px; font-size: 16px;}
+
+.qnaModifyTable textarea{height: 400px; resize: none;}
+
+/* 라벨 스타일 */
+.qnaModifyTable label{font-weight: bold;}
+
+/* 선택 목록 스타일 */
+.qnaModifyTable select{width: 100%; padding: 10px; border: 1px solid #ccc;
+    border-radius: 5px; font-size: 16px;}
+    
+/* 작성, 목록 버튼 */
+.qnaModifyTable button{background-color: #002914; color: white; padding: 10px 20px; border-radius: 5px; font-size: 16px; cursor: pointer;
+    transition: background-color 0.3s ease;}
+.qnaModifyTable button a{text-decoration: none; color: white;}
+.qnaModifyTable button:hover{background-color: rgb(0, 64, 0);}
+
+/* ======================================= 문의 상세 답글 작성 ======================================= */
+/* 답글 작성 폼 스타일 */
+#commSection{margin: 50px auto 50px auto;}
+#commSection h3{width: 1100px; font-size: 18px; text-align: left; margin: 0 auto 10px auto;
+	font-weight: bold; color: white;}
+
+#commSection textarea.comment{width: 1050px; height: 150px; padding: 10px;
+    border: 1px solid #ccc; border-radius: 5px; font-size: 16px;
+    resize: none; margin-bottom: 10px;}
+
+#commSection button[type="submit"]{background-color: #002914; color: white;
+    padding: 10px 20px; border-radius: 5px; font-size: 16px; cursor: pointer;
+    border: none; transition: background-color 0.3s ease; height: 150px;
+    margin-top: -12px;}
+
+#commSection button[type="submit"]:hover{background-color: rgb(0, 64, 0);}
+.commSectionTable{margin: 0 auto;}
+
+/* ======================================= 문의 상세 답글 ======================================= */
+/* 답글 구간 */
+#comments{margin-top: 20px;}
+#comments h3{font-size: 20px; font-weight: bold; margin-bottom: 10px; color: white;}
+	
+/* 답글 테이블 */
+.qnaDetailComm{width: 100%; border-collapse: collapse; margin-bottom: 20px; font-weight: bold; 
+    border: none; background: rgb(232, 233, 253); border-radius: 8px;  text-align: center; }
+
+.qnaDetailComm th, 
+.qnaDetailComm td{padding: 10px; text-align: left;}
+
+.qnaDetailComm th{font-weight: bold; text-align: center;}
+
+.qnaDetailComm tr:nth-of-type(1) th:nth-of-type(1){border-top-left-radius: 8px;}
+.qnaDetailComm tr:nth-of-type(2) th:nth-of-type(1){border-bottom-left-radius: 8px;}
+
+.qnaDetailComm tr:nth-of-type(1) td:nth-of-type(4){border-top-right-radius: 30px;}
+.qnaDetailComm tr:nth-of-type(2) td{border-bottom-right-radius: 30px;}
+
+.qnaDetailComm tr:nth-of-type(1) td:nth-of-type(1),
+.qnaDetailComm tr:nth-of-type(1) td:nth-of-type(2),
+.qnaDetailComm tr:nth-of-type(1) td:nth-of-type(3),
+.qnaDetailComm tr:nth-of-type(1) td:nth-of-type(4){width: 150px; text-align: center;}
+
+/* 수정, 삭제 버튼 스타일 */
+.qnaDetailComm button{background-color: #002914; color: white; padding: 5px 10px;
+    border-radius: 5px; font-size: 14px; cursor: pointer;
+    transition: background-color 0.3s ease; border: none; margin-right: 5px;}
+
+.qnaDetailComm button:last-child{margin-right: 0;}
+.qnaDetailComm button:hover{background-color: rgb(0, 64, 0);}
+
+/* 목록 버튼 스타일 */
+#sectionListBtn{text-align: right; margin-top: 20px;}
+#sectionListBtn button{background-color: #002914; color: white; padding: 10px 20px;
+    border-radius: 5px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;
+    border: none;}
+
+#sectionListBtn button:hover{background-color: rgb(0, 64, 0);}
+
+
+/* ======================================= 문의 답글 수정 ======================================= */
+/* 답글 수정 테이블 */
+#qnaCommentModi{width: 100%; border-collapse: collapse; border: 1px solid #eef0f3;
+    background: #fff; border-radius: 8px; padding: 20px;}
+
+#qnaCommentModi table{width: 100%;}
+#qnaCommentModi textarea{width: 100%; padding: 10px; border: 1px solid #ccc;
+    border-radius: 5px; margin-bottom: 10px; font-size: 16px; height: 300px; resize: none;}
+
+/* 답글 삭제 버튼 */
+#qnaCommentModi tr td{margin: 0 auto; text-align: center;}
+#qnaCommentModi button{background-color: #002914; color: white; padding: 10px 20px;
+    border-radius: 5px; font-size: 16px; cursor: pointer; border: none; margin-right: 10px;
+    transition: background-color 0.3s ease;}
+#qnaCommentModi button a{color: white; text-decoration: none;}
+
+#qnaCommentModi button:last-child{margin-right: 0;}
+#qnaCommentModi button:hover{background-color: rgb(0, 64, 0);}
+
+
+
+/* ========================================================================================== */
+/* ======================================= 후기 게시판 목록 ======================================= */
+/* 후기 목록 테이블 */	
+.reviewListTable{width: 1150px; margin: 0 auto; overflow: auto; background: #fff; border-radius: 8px;}
+.reviewListTable thead th{padding: 15px; height: 60px; background: #F9FAFB; text-align: center; 
+	font-size: 18px; font-weight: 600; border-bottom: 1px solid #eef0f3; text-transform: uppercase;}	
+	
+  
+.reviewListTable tbody tr td{padding: 10px 15px; text-align: center;}
+.reviewListTable tbody tr td:nth-of-type(5){text-align: left;}
+.reviewListTable tbody tr td:nth-of-type(5) a {text-decoration: none; font-size: 15px; color: #554cd1; font-weight: 600;}
+
+
+/* ======================================= 후기 디테일 ======================================= */
+/* 리뷰 상세 테이블 */
+.reviewDetailTable{width: 100%; border-collapse: collapse; margin-bottom: 20px; border: 1px solid #eef0f3; background: #fff; border-radius: 8px;}
+
+.reviewDetailTable th,
+.reviewDetailTable td{padding: 10px; text-align: left; border-bottom: 1px solid #eef0f3;}
+
+.reviewDetailTable th{font-weight: bold; width: 20%; background: #f9fafb;
+	text-align: center;}
+
+.reviewDetailTable th:first-child{border-top-left-radius: 8px;}
+.reviewDetailTable th:last-child{border-top-right-radius: 8px;}
+
+.reviewDetailTable td{width: 80%;}
+.reviewDetailTable tr:nth-of-type(14) td{text-align: center;}
+.reviewDetailTable img{max-width: 1000px; height: auto; display: block; margin: 10px auto;}
+
+/*후기 상세 버튼*/
+.reviewDetailTable button a{color: white; text-decoration: none;}
+.reviewDetailTable button{background-color: #002914; color: white; padding: 10px 20px;
+    border-radius: 5px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;
+    border: none; margin-right: 10px;}
+
+.reviewDetailTable button:last-child{margin-right: 0;}
+.reviewDetailTable button:hover{background-color: rgb(0, 64, 0);}
+
+/* ======================================= 후기 작성 ======================================= */
+/* 후기 작성 테이블 */
+.reviewWriteTable{width: 100%; border-collapse: collapse; margin-bottom: 20px; border: 1px solid #eef0f3;
+    background: #fff; border-radius: 8px;}
+
+.reviewWriteTable th,
+.reviewWriteTable td{padding: 10px; border-bottom: 1px solid #eef0f3;}
+.reviewWriteTable th:first-child{width: 20%; font-weight: bold;}
+.reviewWriteTable td:nth-child(2){width: 80%;}
+
+.reviewWriteTable th{text-align: center;}
+.reviewWriteTable td{text-align: left;}
+
+/* 작성, 목록 버튼 정렬 */
+.reviewWriteTable tr:nth-of-type(10) td{text-align: center;}
+
+/* 입력 */
+.reviewWriteTable input[type="text"],
+.reviewWriteTable input[type="file"],
+.reviewWriteTable select,
+.reviewWriteTable textarea{width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;
+    margin-bottom: 10px; font-size: 16px;}
+
+.reviewWriteTable textarea{height: 150px; resize: none;}
+
+/* 평점 선택 */
+.reviewWriteTable select#grade{width: auto; padding: 5px;}
+
+/* 작성, 목록 버튼 */
+.reviewWriteTable button[type="submit"],
+.reviewListBtn{background-color: #002914; color: white; padding: 10px 20px;
+    border-radius: 5px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;
+    border: none; margin: 0;}
+.reviewListBtn a{color: white; text-decoration: none;}
+.reviewWriteTable button[type="submit"]:hover,
+.reviewWriteTable button.reviewListBtn:hover{background-color: rgb(0, 64, 0); text-decoration: none;}
+
+/* 탈출여부 */
+.reviewWriteTable input[type="radio"]{margin-right: 5px;}
+.reviewWriteTable label[for="clear"]{margin-right: 20px;}
+.reviewWriteTable input[type="file"]{display: block;}
+
+
+/* ======================================= 후기 수정 ======================================= */
+/* 후기 수정 */
+.reviewModiTable{width: 100%; border-collapse: collapse; margin-bottom: 20px;
+    border: 1px solid #eef0f3; background: #fff; border-radius: 8px;}
+
+.reviewModiTable th{width: 20%; font-weight: bold; text-align: center;}
+.reviewModiTable td{width: 80%; padding: 10px; text-align: left; border-bottom: 1px solid #eef0f3;}
+
+.reviewModiTable tr:nth-of-type(10){height: 80px;}
+
+/* 입력 */
+.reviewModiTable input[type="text"],
+.reviewModiTable input[type="file"],
+.reviewModiTable select,
+.reviewModiTable textarea{width: 100%; padding: 10px; border: 1px solid #ccc;
+    border-radius: 5px; margin-bottom: 10px; font-size: 16px;}
+
+.reviewModiTable textarea{height: 150px; resize: none;}
+
+/* 평점 선택 */
+.reviewModiTable select#grade{width: auto; padding: 5px;}
+
+/* 파일 업로드 */
+.reviewModiTable input[type="file"]{display: block;}
+
+/* 버튼 */
+.reviewModiTable button{
+    background-color: #002914; color: white; padding: 10px 20px;
+    border-radius: 5px; font-size: 16px; cursor: pointer;
+    transition: background-color 0.3s ease; border: none; margin: 0 10px 0 0;}
+
+.reviewModiTable button:hover{background-color: rgb(0, 64, 0);}
+
+/* 라벨 */
+.reviewModiTable label{font-weight: bold;}
+
+/* 선택 목록 */
+.reviewModiTable select{width: 100%; padding: 10px; border: 1px solid #ccc;
+    border-radius: 5px; font-size: 16px;}
+.reviewModiTable select#branch_id{width: 100%;}
+.reviewModiTable select#clear{width: auto; padding: 5px;}
+.reviewModiTable span{margin-left: 10px;}
